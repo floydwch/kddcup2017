@@ -1,0 +1,4 @@
+*.sublime-*
+__pycache__
+*.pickle
+submission
