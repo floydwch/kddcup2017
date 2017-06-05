@@ -67,6 +67,8 @@ def routine(dir_path, feature_fns, ext_feature_fns=[]):
 
     if os.path.isfile('feature.pickle'):
         os.remove(dir_path, 'feature.pickle')
+    if os.path.isfile('model.pickle'):
+        os.remove(dir_path, 'model.pickle')
 
 
 def get_data(path):

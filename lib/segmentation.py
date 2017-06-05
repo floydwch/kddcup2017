@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import os
 from itertools import groupby, product
 from functools import partial
 
@@ -115,6 +116,13 @@ def routine(
     )
 
     dump_to_pickle(dir_path, 'segmentation', output)
+
+    if os.path.isfile('extraction.pickle'):
+        os.remove(dir_path, 'extraction.pickle')
+    if os.path.isfile('feature.pickle'):
+        os.remove(dir_path, 'feature.pickle')
+    if os.path.isfile('model.pickle'):
+        os.remove(dir_path, 'model.pickle')
 
 
 def get_df_paths(name):
